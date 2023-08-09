@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-=3zt&z#-8dh87g@bcqfi3yy&hbgy--f9h1m&6k+#)dw#5n%78%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+
 
 
 # Application definition
@@ -134,3 +135,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 RAZOR_KEY_ID = 'rzp_test_N8lD0tUxA9KiFH'
 RAZOR_KEY_SECRET = 'LT0dmEEhQziJhGBKAgnKdnRy'
+
+#static
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
